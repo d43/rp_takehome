@@ -50,7 +50,7 @@ def process_listings(filenames):
 
     df.to_csv("newest_listings.csv", index=False)
 
-    return None
+    return df.shape[0]
 
 
 def connect_database(db_name='lovely'):
@@ -101,7 +101,6 @@ if __name__ == "__main__":
         cur = conn.cursor()
         print "Loading Listings into DB"
         feeds = sys.argv[1:]
-        print feeds
-        process_listings(feeds)
+        num_listings = process_listings(feeds)
         load_listings()
-        print "X new listings were entered into the database"
+        print num_listings, "new listings were entered into the database"
