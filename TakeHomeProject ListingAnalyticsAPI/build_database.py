@@ -82,7 +82,6 @@ if __name__ == "__main__":
     print "Created Database"
     conn = connect_database()
 
-
     if conn:
         print "Connected to Database"
         cur = conn.cursor()
