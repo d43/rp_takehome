@@ -1,9 +1,10 @@
 To Do:
 
 input_listings.py:
+- remove extra print statements
 
 build_database.py:
--new file, remove commands from input_listings.py
+- remove extra print statements
 
 api.py:
 -dataset/common_stats to handle push
