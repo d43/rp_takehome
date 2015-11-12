@@ -7,6 +7,10 @@ Libraries needed:
 
 ## Steps:
 
+Clone Repository to Local Machine
+
+Add Listing Files to Repository
+
 Start Local Postgres Server (GUI)  
 
 From Terminal:  
