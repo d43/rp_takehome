@@ -7,7 +7,7 @@ Libraries needed:
 
 ## Steps:
 
--In Terminal:  
+- In Terminal:  
 
 ```
 git clone https://github.com/d43/rp_takehome  
