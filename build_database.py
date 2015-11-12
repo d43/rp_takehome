@@ -81,6 +81,7 @@ def create_listings_table(conn, cur):
 if __name__ == "__main__":
     create_database()
     conn = connect_database()
+    database, user = sys.argv[1:]
 
     if conn:
         cur = conn.cursor()
