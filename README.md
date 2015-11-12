@@ -7,13 +7,17 @@ Libraries needed:
 
 ## Steps:
 
-- Clone Repository to Local Machine
+-In Terminal:  
+
+```
+git clone https://github.com/d43/rp_takehome  
+```
 
 - Add Listing Files to Repository
 
-- Start Local Postgres Server (GUI)  
+- Start Local Postgres Server 
 
-- From Terminal:  
+- From Terminal: 
 
 ```bash
 python build_database.py
