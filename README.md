@@ -7,13 +7,12 @@ Libraries needed:
 
 ## Steps:
 
-Start Postgres Server (GUI)  
+Start Local Postgres Server (GUI)  
 
 From Terminal:  
 
 ```bash
-<!-- default_database likely = postgres -->
-python build_database.py default_database $(logname)
+python build_database.py
 python input_listings.py listings1.csv listings2.csv listings3.csv
 python api.py
 ```
@@ -23,3 +22,9 @@ In another terminal:
 ```bash
 curl -d '{"city": "San Francisco", "state": "CA", "beds": 1}' -H 'Content-Type: application/json' http://127.0.0.1:8088/dataset/common_stats
 ```
+
+Note:
+* build_database.py assumes default postgres database name is 'postgres'  
+* user name for new database given by os.getlogin()
+* Docker attempt files in /Docker_attempt_archive
+

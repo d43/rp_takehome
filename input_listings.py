@@ -53,7 +53,7 @@ def process_listings(filenames):
     return df.shape[0]
 
 
-def connect_database(user='danaezoule', db_name='lovely'):
+def connect_database(user, db_name='lovely'):
     '''
     Connects to database, returns connection.
 
@@ -94,7 +94,8 @@ def load_listings():
 
 
 if __name__ == "__main__":
-    conn = connect_database()
+    user = os.getlogin()
+    conn = connect_database(user)
 
     if conn:
         cur = conn.cursor()

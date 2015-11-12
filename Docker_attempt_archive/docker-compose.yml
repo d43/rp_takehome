@@ -1,0 +1,10 @@
+web:
+  build: ./web
+  expose:
+     - "8088"
+  links:
+     - postgres:postgres
+   command: python api.py
+
+postgres:
+	build: ./postgres

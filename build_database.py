@@ -1,8 +1,8 @@
 import psycopg2
-import sys
+import os
 
 
-def create_database(user='danaezoule', db_name='lovely'):
+def create_database(user, db_name='lovely'):
     '''
     Connect to postgres, drop database if exists,
     create database.
@@ -29,7 +29,7 @@ def create_database(user='danaezoule', db_name='lovely'):
     conn.close()
 
 
-def connect_database(user='danaezoule', db_name='lovely'):
+def connect_database(user, db_name='lovely'):
     '''
     Connects to database, returns connection.
 
@@ -79,9 +79,9 @@ def create_listings_table(conn, cur):
 
 
 if __name__ == "__main__":
-    create_database()
-    conn = connect_database()
-    database, user = sys.argv[1:]
+    user = os.getlogin()
+    create_database(user)
+    conn = connect_database(user)
 
     if conn:
         cur = conn.cursor()
