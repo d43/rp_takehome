@@ -80,11 +80,8 @@ def create_listings_table(conn, cur):
 
 if __name__ == "__main__":
     create_database()
-    print "Created Database"
     conn = connect_database()
 
     if conn:
-        print "Connected to Database"
         cur = conn.cursor()
         create_listings_table(conn, cur)
-        print "Created Listings Table"

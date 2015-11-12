@@ -94,12 +94,10 @@ def load_listings():
 
 
 if __name__ == "__main__":
-    print "Connecting to Database"
     conn = connect_database()
 
     if conn:
         cur = conn.cursor()
-        print "Loading Listings into DB"
         feeds = sys.argv[1:]
         num_listings = process_listings(feeds)
         load_listings()
