@@ -1,7 +1,8 @@
 import psycopg2
+import sys
 
 
-def create_database(db_name='lovely'):
+def create_database(user='danaezoule', db_name='lovely'):
     '''
     Connect to postgres, drop database if exists,
     create database.
@@ -14,7 +15,7 @@ def create_database(db_name='lovely'):
     '''
     try:
         conn = psycopg2.connect(dbname='postgres',
-                                user='danaezoule',
+                                user=user,
                                 host='localhost')
     except:
         conn = None
@@ -28,7 +29,7 @@ def create_database(db_name='lovely'):
     conn.close()
 
 
-def connect_database(db_name='lovely'):
+def connect_database(user='danaezoule', db_name='lovely'):
     '''
     Connects to database, returns connection.
 
@@ -41,7 +42,7 @@ def connect_database(db_name='lovely'):
 
     try:
         conn = psycopg2.connect(dbname=db_name,
-                                user='danaezoule',
+                                user=user,
                                 host='localhost')
 
     except:

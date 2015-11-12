@@ -53,7 +53,7 @@ def process_listings(filenames):
     return df.shape[0]
 
 
-def connect_database(db_name='lovely'):
+def connect_database(user='danaezoule', db_name='lovely'):
     '''
     Connects to database, returns connection.
 
@@ -66,7 +66,7 @@ def connect_database(db_name='lovely'):
 
     try:
         conn = psycopg2.connect(dbname=db_name,
-                                user='danaezoule',
+                                user=user,
                                 host='localhost')
 
     except:

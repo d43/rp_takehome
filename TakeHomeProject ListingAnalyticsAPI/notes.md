@@ -1,5 +1,15 @@
 To Do:
 
+Dockerfile:
+-postgres, psycopg2, my version of python
+-load code in
+-run code
+
+-get dockercontainer from postgres
+-add lines to import python, psycopg2, pandas
+
+-------------------------------------
+
 input_listings.py:
 - remove extra print statements
 - user for psql??
@@ -10,6 +20,7 @@ build_database.py:
 
 api.py:
 -user for psql??
+
 
 
 Working command:
