@@ -7,13 +7,13 @@ Libraries needed:
 
 ## Steps:
 
-Clone Repository to Local Machine
+- Clone Repository to Local Machine
 
-Add Listing Files to Repository
+- Add Listing Files to Repository
 
-Start Local Postgres Server (GUI)  
+- Start Local Postgres Server (GUI)  
 
-From Terminal:  
+- From Terminal:  
 
 ```bash
 python build_database.py
@@ -21,7 +21,7 @@ python input_listings.py listings1.csv listings2.csv listings3.csv
 python api.py
 ```
 
-In Another Terminal:
+- In Another Terminal:
 
 ```bash
 curl -d '{"city": "San Francisco", "state": "CA", "beds": 1}' -H 'Content-Type: application/json' http://127.0.0.1:8088/dataset/common_stats
@@ -29,6 +29,6 @@ curl -d '{"city": "San Francisco", "state": "CA", "beds": 1}' -H 'Content-Type: 
 
 ## Notes:
 * build_database.py assumes default postgres database name is 'postgres'  
-* user name for new database given by os.getlogin()
+* user name for new database attained by os.getlogin()
 * Docker attempt files in /Docker_attempt_archive
 
